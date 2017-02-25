@@ -1,0 +1,111 @@
+html {
+    font-size: 12px;
+    color: #333;
+}
+body {
+    background-color: #bdc3c7;
+    font-family: 'Roboto', Calibri, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+h5 {
+    font-size: 1.25rem;
+}
+p {
+    font-size: 1rem;
+    margin: 30px 0;
+}
+ul {
+    list-style:  none;
+}
+.navbar-toggle {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 2rem;
+    background-color: #673AB7;
+    border-bottom: 1px solid #311b92;
+    /* box-shadow:  0px 1px 5px 1px #2c3e50; */
+    z-index: 10;
+}
+.navbar {
+    width: 16%;
+    height: 100%;
+    background-color: #34495e;
+    border-right: 1px solid #95a5a6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    margin-right: 1rem;
+    z-index: 100;
+}
+.closed {
+    display: none;
+}
+.portfolio {
+    float: right;
+    position: relative;
+    top: 9px;
+    margin-right: 10px;
+}
+.container {
+    width: 35%;
+    background-color: #fff;
+    margin: -10px auto 0;
+    padding: 60px;
+    z-index: 1;
+    top: -50px;
+    position: relative;
+}
+
+.img-container {
+    text-align:  center;
+    z-index: -1;
+
+    img {
+        width: 50%;
+        z-index: -2;
+    }
+}
+.resume-body {
+    position: relative;
+}
+.content {
+    line-height: 2.5rem;
+}
+@media only screen and (min-device-width: 480px) {
+    html {
+    font-size: 12px;
+    }
+    .introduction {
+        line-height: 2rem;
+    }
+}
+@media only screen and (min-device-width: 800px) {
+    .introduction {
+        line-height: 1.75rem;
+    }
+}
+@media (min-width: 1024px) {
+    p {
+        line-height: 1.75rem;
+    }
+}
