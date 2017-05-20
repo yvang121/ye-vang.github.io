@@ -61,42 +61,68 @@ ul {
 .margin-bot-lg {
     margin-bottom: $lg-rem;
 }
+.navbar-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: .5rem;
+    background-color: $pickled-bluewood;
+    border-bottom: 1px solid $ebony-clay;
+    z-index: 10;
+    height: 22px;
+}
+.nav-control {
+    position: fixed;
+    border: none;
+    text-decoration: none;
+    z-index: 1000;
+    transform: rotate(0);
+    transition: transform .5s;
+    .fa {
+        color: $porcelain;
+        font-size: 1.5rem;
+    }
+    &.open {
+        transform: rotate(180deg);
+        transition: transform .5s;
+    }
+}
+.nav-menu {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $pickled-bluewood;
+    border-right: 1px solid $porcelain;
+    overflow-x: hidden;
+    margin-right: 1rem;
+    transition: width .5s ease-out;
+    &.open {
+        width: 100%;
+        transition: width .5s ease-in;
+    }
+}
+@media screen and (min-width: $breakpoint-xs) {
+    html {
+        font-size: 16px;
+    }
+    .nav-menu {
+        max-width: 30%;
+    }
+}
+@media screen and (min-width: $breakpoint-sm) {
+    .nav-menu {
+        max-width: 250px;
+    }
+}
+@media screen and (min-width: $breakpoint-md) {
 
+}
 
 /** ===================================   Page specific styles   =================================== */
 
 /** Beging index.html styles */
-.navbar-toggle {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 1rem;
-    background-color: $pickled-bluewood;
-    border-bottom: 1px solid $ebony-clay;
-    z-index: 10;
-}
-.nav-control {
-    border: none;
-    text-decoration: none;
-    .fa.fa-chevron-right {
-        color: $porcelain;
-    }
-}
-.navbar {
-    width: 15%;
-    height: 100%;
-    background-color: $pickled-bluewood;
-    border-right: 1px solid $ebony-clay;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    margin-right: 1rem;
-    z-index: 100;
-}
-.closed {
-    width: 0;
-}
 .portfolio {
     float: right;
     position: relative;
@@ -111,7 +137,6 @@ ul {
     z-index: 1;
     position: relative;
 }
-
 .img-container {
     text-align:  center;
     z-index: -1;
@@ -126,9 +151,6 @@ ul {
     line-height: 2rem;
 }
 @media screen and (min-width: $breakpoint-xs) {
-    html {
-        font-size: 16px;
-    }
     .container {
         max-width: 50%;
         top: -2.5rem;
@@ -158,3 +180,24 @@ ul {
     }
 }
 /** End index.html styles */
+
+/** Begin project.html styles */
+.projects-container {
+    max-width: 100%;
+    background-color: white;
+    padding: 2rem;
+    margin: 2.5rem auto 0;
+}
+@media screen and (min-width: $breakpoint-xs) {
+    .projects-container {
+        max-width: 50%;
+    }
+}
+@media screen and (min-width: $breakpoint-sm) {
+
+}
+@media screen and (min-width: $breakpoint-md) {
+    .projects-container {
+        max-width: 45%;
+    }
+}

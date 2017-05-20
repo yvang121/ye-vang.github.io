@@ -1,6 +1,6 @@
 /** Generic colors */
 /** Color palette */
-/** @type {{rem}} [Generic sizing using rems] */
+/** Generic rem sizes */
 /** Breakpoints */
 /** ===================================   Global styles   =================================== */
 html {
@@ -78,43 +78,67 @@ ul {
   margin-bottom: 2rem;
 }
 
-/** ===================================   Page specific styles   =================================== */
-/** Beging index.html styles */
-.navbar-toggle {
+.navbar-container {
   position: fixed;
   width: 100%;
   top: 0;
-  padding: 1rem;
+  padding: .5rem;
   background-color: #34495E;
   border-bottom: 1px solid #22313F;
   z-index: 10;
+  height: 22px;
 }
 
 .nav-control {
+  position: fixed;
   border: none;
   text-decoration: none;
+  z-index: 1000;
+  transform: rotate(0);
+  transition: transform .5s;
 }
-.nav-control .fa.fa-chevron-right {
+.nav-control .fa {
   color: #ECF0F1;
+  font-size: 1.5rem;
+}
+.nav-control.open {
+  transform: rotate(180deg);
+  transition: transform .5s;
 }
 
-.navbar {
-  width: 15%;
+.nav-menu {
+  width: 0;
   height: 100%;
-  background-color: #34495E;
-  border-right: 1px solid #22313F;
   position: fixed;
   top: 0;
   left: 0;
+  background-color: #34495E;
+  border-right: 1px solid #ECF0F1;
   overflow-x: hidden;
   margin-right: 1rem;
-  z-index: 100;
+  transition: width .5s ease-out;
+}
+.nav-menu.open {
+  width: 100%;
+  transition: width .5s ease-in;
 }
 
-.closed {
-  width: 0;
-}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 16px;
+  }
 
+  .nav-menu {
+    max-width: 30%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .nav-menu {
+    max-width: 250px;
+  }
+}
+/** ===================================   Page specific styles   =================================== */
+/** Beging index.html styles */
 .portfolio {
   float: right;
   position: relative;
@@ -148,10 +172,6 @@ ul {
 }
 
 @media screen and (min-width: 480px) {
-  html {
-    font-size: 16px;
-  }
-
   .container {
     max-width: 50%;
     top: -2.5rem;
@@ -180,3 +200,21 @@ ul {
   }
 }
 /** End index.html styles */
+/** Begin project.html styles */
+.projects-container {
+  max-width: 100%;
+  background-color: white;
+  padding: 2rem;
+  margin: 2.5rem auto 0;
+}
+
+@media screen and (min-width: 480px) {
+  .projects-container {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects-container {
+    max-width: 45%;
+  }
+}
