@@ -1,28 +1,33 @@
+@import 'variables';
+@import 'mixins';
+
+/** ===================================   Global styles   ============================== */
 html {
-    font-size: 12px;
-    color: #333;
+    color: $black-gray;
+    font-size: 14px;
 }
 body {
     background-color: #bdc3c7;
     font-family: 'Roboto', Calibri, Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: $dark-gray;
 }
 h1 {
-    font-size: 2.5rem;
+    font-size: $lg-rem;
     font-weight: 600;
     margin-top: 0;
 }
 h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 300;
 }
 h3 {
-    font-size: 1.75rem;
+    font-size: $md-lg-rem;
     font-weight: 600;
 }
 h4 {
-    font-size: 1.5rem;
+    font-size: $md-lg-rem;
     font-weight: 600;
 }
 h5 {
@@ -35,15 +40,44 @@ p {
 ul {
     list-style:  none;
 }
+.font-lt {
+    font-weight: 300;
+}
+.font-sb {
+    font-weight: 600;
+}
+.font-b {
+    font-weight: 800;
+}
+.margin-bot-sm {
+    margin-bottom: $sm-rem;
+}
+.margin-bot-md {
+    margin-bottom: $md-rem;
+}
+.margin-bot-x-md {
+    margin-bottom: $x-md-rem;
+}
+.margin-bot-lg {
+    margin-bottom: $lg-rem;
+}
+
+
+/** ===================================   Page specific styles   ============================== */
+
+/** Beging index.html styles */
 .navbar-toggle {
     position: fixed;
     width: 100%;
     top: 0;
-    padding: 2rem;
-    background-color: #673AB7;
-    border-bottom: 1px solid #311b92;
-    /* box-shadow:  0px 1px 5px 1px #2c3e50; */
+    padding: 1rem;
+    background-color: $pickled-bluewood;
+    border-bottom: 1px solid $ebony-clay;
     z-index: 10;
+    a {
+        border: none;
+        text-decoration: none;
+    }
 }
 .navbar {
     width: 16%;
@@ -79,10 +113,8 @@ ul {
 .img-container {
     text-align:  center;
     z-index: -1;
-
     img {
         width: 50%;
-        z-index: -2;
     }
 }
 .resume-body {
@@ -91,21 +123,22 @@ ul {
 .content {
     line-height: 2.5rem;
 }
-@media only screen and (min-device-width: 480px) {
+@media only screen and (min-width: 480px) {
     html {
-    font-size: 12px;
+        font-size: 16px;
     }
     .introduction {
         line-height: 2rem;
     }
 }
-@media only screen and (min-device-width: 800px) {
+@media only screen and (min-width: 800px) {
     .introduction {
         line-height: 1.75rem;
     }
 }
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     p {
         line-height: 1.75rem;
     }
 }
+/** End index.html styles */
