@@ -1,64 +1,182 @@
-/*
-Error: Undefined variable: "$md-lg-rem".
-        on line 26 of C:\Users\Ye-Vang\Documents\_ye-vang\web-dev\ye-vang.github.io\css\main.scss
+/** Generic colors */
+/** Color palette */
+/** @type {{rem}} [Generic sizing using rems] */
+/** Breakpoints */
+/** ===================================   Global styles   =================================== */
+html {
+  color: #333;
+  font-size: 14px;
+}
 
-21: h2 {
-22:     font-size: 1.75rem;
-23:     font-weight: 300;
-24: }
-25: h3 {
-26:     font-size: $md-lg-rem;
-27:     font-weight: 600;
-28: }
-29: h4 {
-30:     font-size: $md-lg-rem;
-31:     font-weight: 600;
+body {
+  background-color: #bdc3c7;
+  font-family: 'Roboto', Calibri, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #666;
+}
 
-Backtrace:
-C:\Users\Ye-Vang\Documents\_ye-vang\web-dev\ye-vang.github.io\css\main.scss:26
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:404:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:18:in `load'
-C:/Program Files (x86)/Koala/bin/sass:18:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$md-lg-rem\".\A         on line 26 of C:\Users\Ye-Vang\Documents\_ye-vang\web-dev\ye-vang.github.io\css\main.scss\A \A 21: h2 {\A 22:     font-size: 1.75rem;\A 23:     font-weight: 300;\A 24: }\A 25: h3 {\A 26:     font-size: $md-lg-rem;\A 27:     font-weight: 600;\A 28: }\A 29: h4 {\A 30:     font-size: $md-lg-rem;\A 31:     font-weight: 600;"; }
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  margin: 30px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.font-lt {
+  font-weight: 300;
+}
+
+.font-sb {
+  font-weight: 600;
+}
+
+.font-b {
+  font-weight: 800;
+}
+
+.margin-bot-sm {
+  margin-bottom: 0.5rem;
+}
+
+.margin-bot-md {
+  margin-bottom: 1rem;
+}
+
+.margin-bot-x-md {
+  margin-bottom: 1.5rem;
+}
+
+.margin-bot-lg {
+  margin-bottom: 2rem;
+}
+
+/** ===================================   Page specific styles   =================================== */
+/** Beging index.html styles */
+.navbar-toggle {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 1rem;
+  background-color: #34495E;
+  border-bottom: 1px solid #22313F;
+  z-index: 10;
+}
+
+.nav-control {
+  border: none;
+  text-decoration: none;
+}
+.nav-control .fa.fa-chevron-right {
+  color: #ECF0F1;
+}
+
+.navbar {
+  width: 15%;
+  height: 100%;
+  background-color: #34495E;
+  border-right: 1px solid #22313F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  margin-right: 1rem;
+  z-index: 100;
+}
+
+.closed {
+  width: 0;
+}
+
+.portfolio {
+  float: right;
+  position: relative;
+  top: .5rem;
+  margin-right: 1rem;
+}
+
+.container {
+  max-width: 100%;
+  background-color: #fff;
+  margin: -1rem auto 0;
+  padding: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.img-container {
+  text-align: center;
+  z-index: -1;
+}
+.img-container img {
+  max-width: 100%;
+}
+
+.resume-body {
+  position: relative;
+}
+
+.content {
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 50%;
+    top: -2.5rem;
+  }
+
+  .img-container img {
+    max-width: 75%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .introduction {
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  p {
+    line-height: 1.75rem;
+  }
+
+  .container {
+    max-width: 45%;
+  }
+
+  .img-container img {
+    max-width: 60%;
+  }
+}
+/** End index.html styles */

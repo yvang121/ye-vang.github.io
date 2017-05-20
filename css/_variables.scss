@@ -11,6 +11,7 @@ $chambray: #3A539B;
 $ebony-clay: #22313F;
 $madison: #2C3E50;
 $rebecca-purple: #663399;
+$porcelain: #ECF0F1;
 
 /** @type {{rem}} [Generic sizing using rems] */
 $x-sm-rm: .25rem;
@@ -18,3 +19,8 @@ $sm-rem: .5rem;
 $md-rem: 1rem;
 $x-md-rem: 1.5rem;
 $lg-rem: 2rem;
+
+/** Breakpoints */
+$breakpoint-xs: 480px;
+$breakpoint-sm: 800px;
+$breakpoint-md: 1024px;

@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'mixins';
 
-/** ===================================   Global styles   ============================== */
+/** ===================================   Global styles   =================================== */
 html {
     color: $black-gray;
     font-size: 14px;
@@ -23,11 +23,11 @@ h2 {
     font-weight: 300;
 }
 h3 {
-    font-size: $md-lg-rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 h4 {
-    font-size: $md-lg-rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 h5 {
@@ -63,7 +63,7 @@ ul {
 }
 
 
-/** ===================================   Page specific styles   ============================== */
+/** ===================================   Page specific styles   =================================== */
 
 /** Beging index.html styles */
 .navbar-toggle {
@@ -74,16 +74,19 @@ ul {
     background-color: $pickled-bluewood;
     border-bottom: 1px solid $ebony-clay;
     z-index: 10;
-    a {
-        border: none;
-        text-decoration: none;
+}
+.nav-control {
+    border: none;
+    text-decoration: none;
+    .fa.fa-chevron-right {
+        color: $porcelain;
     }
 }
 .navbar {
-    width: 16%;
+    width: 15%;
     height: 100%;
-    background-color: #34495e;
-    border-right: 1px solid #95a5a6;
+    background-color: $pickled-bluewood;
+    border-right: 1px solid $ebony-clay;
     position: fixed;
     top: 0;
     left: 0;
@@ -92,21 +95,20 @@ ul {
     z-index: 100;
 }
 .closed {
-    display: none;
+    width: 0;
 }
 .portfolio {
     float: right;
     position: relative;
-    top: 9px;
-    margin-right: 10px;
+    top: .5rem;
+    margin-right: 1rem;
 }
 .container {
-    width: 35%;
+    max-width: 100%;
     background-color: #fff;
-    margin: -10px auto 0;
-    padding: 60px;
+    margin: -1rem auto 0;
+    padding: 2rem;
     z-index: 1;
-    top: -50px;
     position: relative;
 }
 
@@ -114,31 +116,45 @@ ul {
     text-align:  center;
     z-index: -1;
     img {
-        width: 50%;
+        max-width: 100%;
     }
 }
 .resume-body {
     position: relative;
 }
 .content {
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
-@media only screen and (min-width: 480px) {
+@media screen and (min-width: $breakpoint-xs) {
     html {
         font-size: 16px;
     }
-    .introduction {
-        line-height: 2rem;
+    .container {
+        max-width: 50%;
+        top: -2.5rem;
+    }
+    .img-container {
+        img {
+            max-width: 75%;
+        }
     }
 }
-@media only screen and (min-width: 800px) {
+@media screen and (min-width: $breakpoint-sm) {
     .introduction {
         line-height: 1.75rem;
     }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $breakpoint-md) {
     p {
         line-height: 1.75rem;
+    }
+    .container {
+        max-width: 45%;
+    }
+    .img-container {
+        img {
+            max-width: 60%;
+        }
     }
 }
 /** End index.html styles */
