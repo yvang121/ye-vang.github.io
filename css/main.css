@@ -138,7 +138,7 @@ ul {
   }
 }
 /** ===================================   Page specific styles   =================================== */
-/** Beging index.html styles */
+/** Begin index.html styles */
 .portfolio {
   float: right;
   position: relative;
@@ -148,23 +148,27 @@ ul {
 
 .container {
   max-width: 100%;
-  background-color: #fff;
   margin: -1rem auto 0;
-  padding: 2rem;
   z-index: 1;
   position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .img-container {
   text-align: center;
   z-index: -1;
+  border-radius: 0.25rem;
 }
 .img-container img {
-  max-width: 100%;
+  width: 100%;
 }
 
-.resume-body {
+.card {
   position: relative;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
 }
 
 .content {
@@ -173,12 +177,8 @@ ul {
 
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 50%;
+    max-width: 750px;
     top: -2.5rem;
-  }
-
-  .img-container img {
-    max-width: 75%;
   }
 }
 @media screen and (min-width: 800px) {
@@ -192,11 +192,12 @@ ul {
   }
 
   .container {
-    max-width: 45%;
+    max-width: 980px;
   }
-
-  .img-container img {
-    max-width: 60%;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
   }
 }
 /** End index.html styles */
