@@ -4,14 +4,20 @@
 /** ===================================   Global styles   =================================== */
 html {
     color: $black-gray;
-    font-size: 14px;
 }
 body {
-    background-color: #bdc3c7;
+    background-color: $tuna;
     font-family: 'Roboto', Calibri, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: $dark-gray;
+    color: rgb(9, 11, 15);
+    font-size: 14px;
+    @media screen and (min-width: $breakpoint-xs) {
+        font-size: 16px;
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+        font-size: 18px;
+    }
 }
 h1 {
     font-size: $lg-rem;
@@ -34,7 +40,6 @@ h5 {
     font-size: 1.25rem;
 }
 p {
-    font-size: $md-rem;
     margin: 30px 0;
 }
 ul {
@@ -61,63 +66,19 @@ ul {
 .margin-bot-lg {
     margin-bottom: $lg-rem;
 }
-.navbar-container {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: .5rem;
-    background-color: $pickled-bluewood;
-    border-bottom: 1px solid $ebony-clay;
-    z-index: 10;
-    height: 22px;
-}
-.nav-control {
-    position: fixed;
-    border: none;
+.btn {
+    padding: 12px 30px;
+    color: white;
     text-decoration: none;
-    z-index: 1000;
-    transform: rotate(0);
-    transition: transform .5s;
-    .fa {
-        color: $porcelain;
-        font-size: 1.5rem;
+    border-radius: 5px;
+    &.btn-primary {
+        background-color: $dusty-gray;
+        border: 1px solid $dusty-gray;
     }
-    &.open {
-        transform: rotate(180deg);
-        transition: transform .5s;
+    &.btn-secondary {
+        background-color: $mobster;
+        border: 1px solid $mobster;
     }
-}
-.nav-menu {
-    width: 0;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: $pickled-bluewood;
-    border-right: 1px solid $porcelain;
-    overflow-x: hidden;
-    margin-right: 1rem;
-    transition: width .5s ease-out;
-    &.open {
-        width: 100%;
-        transition: width .5s ease-in;
-    }
-}
-@media screen and (min-width: $breakpoint-xs) {
-    html {
-        font-size: 16px;
-    }
-    .nav-menu {
-        max-width: 30%;
-    }
-}
-@media screen and (min-width: $breakpoint-sm) {
-    .nav-menu {
-        max-width: 250px;
-    }
-}
-@media screen and (min-width: $breakpoint-md) {
-
 }
 
 /** ===================================   Page specific styles   =================================== */
@@ -131,13 +92,13 @@ ul {
 }
 .container {
     max-width: 100%;
-    margin: -1rem auto 0;
+    margin: 0 auto;
     z-index: 1;
     position: relative;
     padding-left: 15px;
     padding-right: 15px;
 }
-.img-container {
+.masthead {
     text-align:  center;
     z-index: -1;
     border-radius: $x-sm-rm;
@@ -145,19 +106,42 @@ ul {
         width: 100%;
     }
 }
+.img-circle {
+    border-radius: 50%;
+    border: 1px solid red;
+}
 .card {
     position: relative;
     padding: 1.5rem;
-    background-color: #fff;
+    background-color: $mercury;
     border-radius: $x-sm-rm;
+    margin-bottom: $lg-rem;
+}
+.card.overlap {
+    margin-top: -2rem;
 }
 .content {
-    line-height: 2rem;
+    line-height: 1.75rem;
+}
+.profile {
+    .user, & > h1 {
+        display: inline-block;
+        margin: 0;
+        vertical-align: middle;
+    }
+}
+.binary-columns {
+    text-align: center;
+    @media screen and (min-width: $breakpoint-xs) {
+        .column-primary, .column-secondary {
+            display: inline-block;
+            width: 49%;
+        }
+    }
 }
 @media screen and (min-width: $breakpoint-xs) {
     .container {
         max-width: 750px;
-        top: -2.5rem;
     }
 }
 @media screen and (min-width: $breakpoint-sm) {

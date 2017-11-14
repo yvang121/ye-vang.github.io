@@ -1,19 +1,30 @@
 /** Generic colors */
 /** Color palette */
+/** Color palette 2.0 */
 /** Generic rem sizes */
 /** Breakpoints */
 /** ===================================   Global styles   =================================== */
 html {
   color: #333;
-  font-size: 14px;
 }
 
 body {
-  background-color: #bdc3c7;
+  background-color: #3A3A45;
   font-family: 'Roboto', Calibri, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #666;
+  color: #090b0f;
+  font-size: 14px;
+}
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 h1 {
@@ -42,7 +53,6 @@ h5 {
 }
 
 p {
-  font-size: 1rem;
   margin: 30px 0;
 }
 
@@ -78,65 +88,21 @@ ul {
   margin-bottom: 2rem;
 }
 
-.navbar-container {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: .5rem;
-  background-color: #34495E;
-  border-bottom: 1px solid #22313F;
-  z-index: 10;
-  height: 22px;
-}
-
-.nav-control {
-  position: fixed;
-  border: none;
+.btn {
+  padding: 12px 30px;
+  color: white;
   text-decoration: none;
-  z-index: 1000;
-  transform: rotate(0);
-  transition: transform .5s;
+  border-radius: 5px;
 }
-.nav-control .fa {
-  color: #ECF0F1;
-  font-size: 1.5rem;
+.btn.btn-primary {
+  background-color: #A1908F;
+  border: 1px solid #A1908F;
 }
-.nav-control.open {
-  transform: rotate(180deg);
-  transition: transform .5s;
+.btn.btn-secondary {
+  background-color: #79727C;
+  border: 1px solid #79727C;
 }
 
-.nav-menu {
-  width: 0;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #34495E;
-  border-right: 1px solid #ECF0F1;
-  overflow-x: hidden;
-  margin-right: 1rem;
-  transition: width .5s ease-out;
-}
-.nav-menu.open {
-  width: 100%;
-  transition: width .5s ease-in;
-}
-
-@media screen and (min-width: 480px) {
-  html {
-    font-size: 16px;
-  }
-
-  .nav-menu {
-    max-width: 30%;
-  }
-}
-@media screen and (min-width: 800px) {
-  .nav-menu {
-    max-width: 250px;
-  }
-}
 /** ===================================   Page specific styles   =================================== */
 /** Begin index.html styles */
 .portfolio {
@@ -148,37 +114,62 @@ ul {
 
 .container {
   max-width: 100%;
-  margin: -1rem auto 0;
+  margin: 0 auto;
   z-index: 1;
   position: relative;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.img-container {
+.masthead {
   text-align: center;
   z-index: -1;
   border-radius: 0.25rem;
 }
-.img-container img {
+.masthead img {
   width: 100%;
+}
+
+.img-circle {
+  border-radius: 50%;
+  border: 1px solid red;
 }
 
 .card {
   position: relative;
   padding: 1.5rem;
-  background-color: #fff;
+  background-color: #E9E9E9;
   border-radius: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.card.overlap {
+  margin-top: -2rem;
 }
 
 .content {
-  line-height: 2rem;
+  line-height: 1.75rem;
+}
+
+.profile .user, .profile > h1 {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.binary-columns {
+  text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .binary-columns .column-primary, .binary-columns .column-secondary {
+    display: inline-block;
+    width: 49%;
+  }
 }
 
 @media screen and (min-width: 480px) {
   .container {
     max-width: 750px;
-    top: -2.5rem;
   }
 }
 @media screen and (min-width: 800px) {
