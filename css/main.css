@@ -123,10 +123,12 @@ ul {
   display: inline-block;
   margin: 0;
   vertical-align: middle; }
-.profile h1 {
+.profile .user h1 {
   margin: 2rem 0 .5rem; }
-.profile p {
+.profile .user p {
   margin: 0; }
+.profile .user a {
+  text-decoration: none; }
 
 .namespace {
   text-align: center;

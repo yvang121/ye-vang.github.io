@@ -131,11 +131,16 @@ ul {
         margin: 0;
         vertical-align: middle;
     }
-    h1 {
-        margin: 2rem 0 .5rem;
-    }
-    p {
-        margin: 0;
+    .user {
+        h1 {
+            margin: 2rem 0 .5rem;
+        }
+        p {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+        }
     }
 }
 .namespace {
