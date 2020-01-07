@@ -7,7 +7,7 @@ html {
 }
 body {
     background-color: $tuna;
-    font-family: 'Roboto', Calibri, Arial, sans-serif;
+    font-family: 'Karla', Calibri, Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: rgb(9, 11, 15);
@@ -108,17 +108,19 @@ ul {
 }
 .img-circle {
     border-radius: 50%;
-    border: 1px solid red;
+    width: 250px;
 }
 .card {
     position: relative;
-    padding: 1.5rem;
+    padding: 4rem;
     background-color: $mercury;
     border-radius: $x-sm-rm;
     margin-bottom: $lg-rem;
-}
-.card.overlap {
-    margin-top: -2rem;
+    // TODO: add box-shadow to cards
+    
+    &.top {
+        margin-top: 5rem;
+    }
 }
 .content {
     line-height: 1.75rem;
@@ -129,15 +131,16 @@ ul {
         margin: 0;
         vertical-align: middle;
     }
-}
-.binary-columns {
-    text-align: center;
-    @media screen and (min-width: $breakpoint-xs) {
-        .column-primary, .column-secondary {
-            display: inline-block;
-            width: 49%;
-        }
+    h1 {
+        margin: 2rem 0 .5rem;
     }
+    p {
+        margin: 0;
+    }
+}
+.namespace {
+    text-align: center;
+    margin: auto;
 }
 @media screen and (min-width: $breakpoint-xs) {
     .container {
@@ -155,11 +158,6 @@ ul {
     }
     .container {
         max-width: 980px;
-    }
-}
-@media screen and (min-width: $breakpoint-lg) {
-    .container {
-        max-width: 1170px;
     }
 }
 /** End index.html styles */

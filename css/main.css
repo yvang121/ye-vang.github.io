@@ -5,103 +5,80 @@
 /** Breakpoints */
 /** ===================================   Global styles   =================================== */
 html {
-  color: #333;
-}
+  color: #333; }
 
 body {
   background-color: #3A3A45;
-  font-family: 'Roboto', Calibri, Arial, sans-serif;
+  font-family: 'Karla', Calibri, Arial, sans-serif;
   margin: 0;
   padding: 0;
   color: #090b0f;
-  font-size: 14px;
-}
-@media screen and (min-width: 480px) {
-  body {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 800px) {
-  body {
-    font-size: 18px;
-  }
-}
+  font-size: 14px; }
+  @media screen and (min-width: 480px) {
+    body {
+      font-size: 16px; } }
+  @media screen and (min-width: 800px) {
+    body {
+      font-size: 18px; } }
 
 h1 {
   font-size: 2rem;
   font-weight: 600;
-  margin-top: 0;
-}
+  margin-top: 0; }
 
 h2 {
   font-size: 1.75rem;
-  font-weight: 300;
-}
+  font-weight: 300; }
 
 h3 {
   font-size: 1.5rem;
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 h4 {
   font-size: 1.5rem;
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 h5 {
-  font-size: 1.25rem;
-}
+  font-size: 1.25rem; }
 
 p {
-  margin: 30px 0;
-}
+  margin: 30px 0; }
 
 ul {
-  list-style: none;
-}
+  list-style: none; }
 
 .font-lt {
-  font-weight: 300;
-}
+  font-weight: 300; }
 
 .font-sb {
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 .font-b {
-  font-weight: 800;
-}
+  font-weight: 800; }
 
 .margin-bot-sm {
-  margin-bottom: 0.5rem;
-}
+  margin-bottom: 0.5rem; }
 
 .margin-bot-md {
-  margin-bottom: 1rem;
-}
+  margin-bottom: 1rem; }
 
 .margin-bot-x-md {
-  margin-bottom: 1.5rem;
-}
+  margin-bottom: 1.5rem; }
 
 .margin-bot-lg {
-  margin-bottom: 2rem;
-}
+  margin-bottom: 2rem; }
 
 .btn {
   padding: 12px 30px;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-}
-.btn.btn-primary {
-  background-color: #A1908F;
-  border: 1px solid #A1908F;
-}
-.btn.btn-secondary {
-  background-color: #79727C;
-  border: 1px solid #79727C;
-}
+  border-radius: 5px; }
+  .btn.btn-primary {
+    background-color: #A1908F;
+    border: 1px solid #A1908F; }
+  .btn.btn-secondary {
+    background-color: #79727C;
+    border: 1px solid #79727C; }
 
 /** ===================================   Page specific styles   =================================== */
 /** Begin index.html styles */
@@ -109,8 +86,7 @@ ul {
   float: right;
   position: relative;
   top: .5rem;
-  margin-right: 1rem;
-}
+  margin-right: 1rem; }
 
 .container {
   max-width: 100%;
@@ -118,95 +94,67 @@ ul {
   z-index: 1;
   position: relative;
   padding-left: 15px;
-  padding-right: 15px;
-}
+  padding-right: 15px; }
 
 .masthead {
   text-align: center;
   z-index: -1;
-  border-radius: 0.25rem;
-}
-.masthead img {
-  width: 100%;
-}
+  border-radius: 0.25rem; }
+  .masthead img {
+    width: 100%; }
 
 .img-circle {
   border-radius: 50%;
-  border: 1px solid red;
-}
+  width: 250px; }
 
 .card {
   position: relative;
-  padding: 1.5rem;
+  padding: 4rem;
   background-color: #E9E9E9;
   border-radius: 0.25rem;
-  margin-bottom: 2rem;
-}
-
-.card.overlap {
-  margin-top: -2rem;
-}
+  margin-bottom: 2rem; }
+  .card.top {
+    margin-top: 5rem; }
 
 .content {
-  line-height: 1.75rem;
-}
+  line-height: 1.75rem; }
 
 .profile .user, .profile > h1 {
   display: inline-block;
   margin: 0;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
+.profile h1 {
+  margin: 2rem 0 .5rem; }
+.profile p {
+  margin: 0; }
 
-.binary-columns {
+.namespace {
   text-align: center;
-}
-@media screen and (min-width: 480px) {
-  .binary-columns .column-primary, .binary-columns .column-secondary {
-    display: inline-block;
-    width: 49%;
-  }
-}
+  margin: auto; }
 
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 750px;
-  }
-}
+    max-width: 750px; } }
 @media screen and (min-width: 800px) {
   .introduction {
-    line-height: 1.75rem;
-  }
-}
+    line-height: 1.75rem; } }
 @media screen and (min-width: 1024px) {
   p {
-    line-height: 1.75rem;
-  }
+    line-height: 1.75rem; }
 
   .container {
-    max-width: 980px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1170px;
-  }
-}
+    max-width: 980px; } }
 /** End index.html styles */
 /** Begin project.html styles */
 .projects-container {
   max-width: 100%;
   background-color: white;
   padding: 2rem;
-  margin: 2.5rem auto 0;
-}
+  margin: 2.5rem auto 0; }
 
 @media screen and (min-width: 480px) {
   .projects-container {
-    max-width: 50%;
-  }
-}
+    max-width: 50%; } }
 @media screen and (min-width: 1024px) {
   .projects-container {
-    max-width: 45%;
-  }
-}
+    max-width: 45%; } }
